@@ -232,14 +232,146 @@
         cursor: pointer;
         left: 10px;
     }
+    /* Main Container */
+.main-container {
+    display: block;
+    padding: 1rem;
+    width: 60vw;
+    margin: 0 auto;
+    overflow-y: auto;
+    background-color: var(--black);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    color: var(--white);
+}
+
+/* Story Container */
+.story-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.story p {
+    font-size: 0.75rem;
+    color: var(--light-grey);
+    margin-top: 0.5rem;
+}
+
+/* Post Styles */
+.post {
+    background-color: var(--grey);
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem;
+    justify-content: space-between;
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.more-options {
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.post-img {
+    width: 100%;
+    height: auto;
+}
+
+/* Post Action Icons */
+.post-actions {
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+}
+
+.post-actions i {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* Like Count */
+.likes {
+    padding: 0.5rem;
+    font-weight: bold;
+    color: var(--light-grey);
+}
+
+/* Post Description */
+.post-description {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--white);
+}
+
+.post-description a {
+    color: var(--blue);
+}
+
+.icon-style1,
+.icon-style2 {
+    cursor: pointer;
+    color: var(--white);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .main-container {
+        width: 80vw;
+    }
+
+    .post-header {
+        padding: 0.5rem;
+    }
+
+    .profile-img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .post-actions i {
+        font-size: 1.2rem;
+    }
+}
+
 </style>
 
 <body>
     <div class="sidebar">
         <div class="top-section">
 
-            <img class="logo" src="insta-written.png" alt="main insta logo" />
-            <img class="logo2" src="insta-logo.png" style="height: 1rem; margin-right: 0.5rem;" alt="square insta logo" />
+            <img class="logo" src="./assets/insta-written.png" alt="main insta logo" />
+            <img class="logo2" src="./assets/insta-logo.png" style="height: 1rem; margin-right: 0.5rem;" alt="square insta logo" />
 
             <div class="link">
                 <img src="./assets/home.png" />
@@ -338,6 +470,7 @@
 
 
     <div class="main-container">
+        <!-- Story Section -->
         <div class="story-container">
             <div class="story">
                 <div class="gradient">
@@ -345,37 +478,76 @@
                 </div>
                 <p>Pranjal Rawat</p>
             </div>
-
+    
             <div class="story">
                 <div class="gradient">
                     <img src="./assets/kinjaldp.png" alt="Profile Picture" />
                 </div>
                 <p>Kinjal Shrivastava</p>
             </div>
-
+    
             <div class="story">
                 <div class="gradient">
                     <img src="./assets/shristydp.png" alt="Profile Picture" />
                 </div>
                 <p>Shristy Shrivastava</p>
             </div>
-
+    
             <div class="story">
                 <div class="gradient">
                     <img src="./assets/abhiiidp.png" alt="Profile Picture" />
                 </div>
-                <p>Abhinandan thakur</p>
+                <p>Abhinandan Thakur</p>
             </div>
         </div>
-        <i class='  fas fa-chevron-circle-left icon-style2 nav-left' style="font-size: 24px"></i>
-        <i class='  fas fa-chevron-circle-right icon-style1 nav-right' style="font-size: 24px"></i>
-
-        
+    
+        <!-- Post Navigation Arrows -->
+        <i class="fas fa-chevron-circle-left icon-style2 nav-left" style="font-size: 24px"></i>
+        <i class="fas fa-chevron-circle-right icon-style1 nav-right" style="font-size: 24px"></i>
+    
+        <!-- Post Section -->
         <div class="post-container">
-            <div class="profile-container">
+            <!-- Post 1 -->
+            <div class="post">
+                <div class="post-header">
+                    <img class="profile-img" src="./assets/abhiiidp.png" alt="User" />
+                    <p class="username">abbbb_</p>
+                    <i class="fas fa-ellipsis-h more-options"></i>
+                </div>
+                <img class="post-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Justin_Bieber_in_2015.jpg/220px-Justin_Bieber_in_2015.jpg" alt="Post" />
+                <div class="post-actions">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <p class="likes">2,456 likes</p>
+                <p class="post-description">
+                    Wish i Could be like him but i have work to do #insta #example #tired
+                </p>
+            </div>
+    
+            <!-- Post 2 -->
+            <div class="post">
+                <div class="post-header">
+                    <img class="profile-img" src="./assets/shristyStory.jpg" alt="User" />
+                    <p class="username">shesss_277</p>
+                    <i class="fas fa-ellipsis-h more-options"></i>
+                </div>
+                <img class="post-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png/220px-Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png" alt="Post" />
+                <div class="post-actions">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-comment"></i>
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <p class="likes">1,234 likes</p>
+                <p class="post-description">
+                    Lovely Flower #insta #example
+                </p>
             </div>
         </div>
     </div>
+    
+
     <script>feather.replace();</script>
 </body>
 
